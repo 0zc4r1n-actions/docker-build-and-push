@@ -1,2 +1,3 @@
-# docker-build-and-push
-Docker Build and Push GitHub Action
+# Docker build and push github action
+
+This is a GitHub Action to Build and Push Docker Image

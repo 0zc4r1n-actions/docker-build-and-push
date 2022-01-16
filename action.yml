@@ -1,0 +1,40 @@
+# action.yml
+name: 'Build and Push Image'
+description: 'This action build and push a docker image to docker registry'
+inputs:
+  DOCKER_USERNAME:
+    description: 'Container registry username'
+    required: true
+    default: '0zc4r1n'
+  DOCKER_PASSWORD:
+    description: 'Container registry password'
+    required: true
+  DOCKER_REGISTRY:
+    description: 'Container registry name'
+    required: true
+    default: 'docker.io'
+  DOCKER_REPO_NAME:
+    description: 'Container repo name'
+    required: true
+    default: '0zc4r1n'
+  DOCKER_IMAGE_NAME:
+    description: 'Docker image name'
+    required: true
+    default: 'default_name'
+  DOCKER_IMAGE_TAG:
+    description: 'Docker image tag'
+    required: true
+    default: 'latest'
+outputs:
+  time:
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.DOCKER_USERNAME }}
+    - ${{ inputs.DOCKER_PASSWORD }}
+    - ${{ inputs.DOCKER_REGISTRY }}
+    - ${{ inputs.DOCKER_REPO_NAME }}
+    - ${{ inputs.DOCKER_IMAGE_NAME }}
+    - ${{ inputs.DOCKER_IMAGE_TAG }}
