@@ -25,6 +25,9 @@ inputs:
     description: 'Docker image tag'
     required: true
     default: 'latest'
+outputs:
+  RESULT_IMAGE:
+    description: 'Docker image generated'
 runs:
   using: 'docker'
   image: 'Dockerfile'
