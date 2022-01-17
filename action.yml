@@ -1,6 +1,6 @@
 # action.yml
 name: 'Build and Push Image'
-description: 'This action build and push a docker image to docker registry'
+description: 'This action builds and pushes a docker image onto docker registry'
 inputs:
   DOCKER_USERNAME:
     description: 'Container registry username'
@@ -25,9 +25,6 @@ inputs:
     description: 'Docker image tag'
     required: true
     default: 'latest'
-outputs:
-  time:
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
