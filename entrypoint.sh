@@ -11,4 +11,4 @@ docker tag $IMAGE $IMAGE_LATEST
 docker push $IMAGE
 docker push $IMAGE_LATEST
 
-echo '::set-output name=RESULT_IMAGE::$IMAGE'
+echo "::set-output name=RESULT_IMAGE::$IMAGE"
